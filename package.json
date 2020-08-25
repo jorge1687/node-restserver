@@ -1,16 +1,28 @@
 {
     "name": "07-restserver",
     "version": "1.0.0",
-    "description": "",
     "main": "index.js",
     "scripts": {
         "start": "node server/server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Jorge AMA",
+    "author": "",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1"
-    }
+        "bcrypt": "^5.0.0",
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "mongoose": "^5.10.0",
+        "mongoose-unique-validator": "^2.0.0",
+        "underscore": "^1.8.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jorge1687/node-restserver.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jorge1687/node-restserver/issues"
+    },
+    "homepage": "https://github.com/jorge1687/node-restserver#readme",
+    "description": ""
 }
