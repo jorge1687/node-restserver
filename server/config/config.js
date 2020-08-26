@@ -21,5 +21,4 @@ if (process.env.NODE_ENV === 'dev') {
     urlDB = process.env.MONGO_URI;
 }
 process.env.URLDB = urlDB;
-
-//process.env.URLDB = 'mongodb+srv://jorge:jorge@mendoza-m0.7mjte.mongodb.net/cafe?retryWrites=true&w=majority';
+console.log('Termina lectura de configuración');
