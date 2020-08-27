@@ -22,3 +22,15 @@ if (process.env.NODE_ENV === 'dev') {
 }
 process.env.URLDB = urlDB;
 console.log('Termina lectura de configuración');
+
+
+// ============================
+//  Vencimiento del token
+// ============================
+process.env.CADUCIDAD_TOKE = 60 * 60 * 24 * 30;
+
+// ============================
+//  SEED del token
+// ============================
+
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
