@@ -54,9 +54,8 @@ app.put('/upload/:tipo/:id', function(req, res) {
     //cambiar el nombre del archivo
     let nombreArchivo = `${id}-${new Date().getMilliseconds()}.${extension}`;
     console.log(`Entra 4 ${nombreArchivo}`);
-    let pathImg = path.resolve(__dirname, `../../uploads/${tipo}/${nombreArchivo}`);
-    console.log(`Entra 5 ${pathImg}`);
-    archivo.mv(pathImg, (err) => {
+
+    archivo.mv(`uploads/${ tipo }/${ nombreArchivo }`, (err) => {
 
         console.log(err);
         if (err) {
