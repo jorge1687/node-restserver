@@ -40,7 +40,7 @@ app.put('/upload/:tipo/:id', function(req, res) {
     let extension = nombreCortado[nombreCortado.length - 1];
     //Extensiones permitidas
     let extensionesValidas = ['png', 'jpg', 'jpeg', 'gif'];
-    console.log(`Entra 3 ${archivo} ${extension} ${nombreCortado}`);
+    console.log(`Entra 3 ${extension} ${nombreCortado}`);
     if (extensionesValidas.indexOf(extension) < 0) {
         return res.status(400).json({
             ok: false,
@@ -56,7 +56,7 @@ app.put('/upload/:tipo/:id', function(req, res) {
     console.log(`Entra 4 ${nombreArchivo}`);
     archivo.mv(`uploads/${tipo}/${nombreArchivo}`, (err) => {
 
-        console.log(`Entra 5`);
+        console.log(err);
         if (err) {
             return res.status(500).json({
                 ok: false,
